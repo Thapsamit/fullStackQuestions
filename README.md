@@ -31,4 +31,27 @@
 
 
 
+## What is The difference between GraphQL vs RestAPI?
+- GraphQL is an alternative to REST for developing APIs, not a replacement.
+- The biggest difference between GraphQL and REST is the manner in which data is sent to the client.
+
+| GraphQL | RESTApi |
+| ------- | ------- |
+| while in GraphQL, the client requests data with queries. |  In a REST architecture, the client makes an HTTP request and data is sent as an HTTP response, |
+| In GraphL, you define the object on the client. | the structure of the request object is defined on the server. |
+| GraphQL was designed to allow the client to ask for only the data it needs. While the server might be able to deliver more data to the client for a single request, it would only send the data requested by the client. | It uses multiple requests to get different dta |
+| GraphQL simplifies the task of aggregating data from multiple sources or APIs and then resolving the data to the client in a single API call.  | On the other hand, API technologies like REST would require multiple HTTP calls to access data from multiple sources. |
+| GraphQL exposes a single endpoint that allows you to access multiple resources. | It exposes multiple endpoints to access multiple resources |
+| No under or uver fetching of data | May under or over fetch the data |
+
+## When should you use a REST API?
+- GraphQL gives clients the power to execute queries to get exactly what they need. But, what if a client sends a query asking for many fields and resources,  therefore areise performance issues.
+- For complex queries, a REST API might be easier to design because you can establish multiple endpoints for specific needs,
+- The main benefit of using GraphQL is the ability to send a query that specifies only the information you need and receiving exactly that. However, you can achieve this same effect using REST, by passing the name of the fields you want to use in the URL,
+- In REST, checking the response status is the only way to know whether the request was executed successfully, if there was a server error, or if the resource was not found. But, when an error occurs in GraphQL, you get something similar to the following:
+- You’ll have to parse this message to know if there’s an error, and different errors will probably have slightly different formats or some custom fields.
+
+
+
+
 
